@@ -5,7 +5,7 @@ function CartOverview() {
     <div
       style={{
         border: "2px solid green",
-        padding: "20px",
+        padding: "12px 20px",
         borderRadius: "12px",
       }}
     >

@@ -1,5 +1,32 @@
+import { useLoaderData } from "react-router-dom";
+import { getMenu } from "../../services/apiRestaurant";
+import MenuItem from "./MenuItem";
+
 function Menu() {
-  return <h1>Menu</h1>;
+  // we do this way instead of directly doing this is that the loader only runs when this specific component is rendered (fetch on render approach)
+  const menu = useLoaderData();
+
+  return (
+    <ul
+      style={{
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr 1fr",
+        listStyle: "none",
+        gap: "10px",
+      }}
+    >
+      {menu.map((pizza) => (
+        <MenuItem pizza={pizza} key={pizza.id} />
+      ))}
+    </ul>
+  );
+}
+
+// This is according to the convention that a loader function is written in the file it will be used in and could be called loader
+// eslint-disable-next-line react-refresh/only-export-components
+export async function loader() {
+  const menu = await getMenu();
+  return menu;
 }
 
 export default Menu;
