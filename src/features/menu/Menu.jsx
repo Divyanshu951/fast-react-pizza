@@ -3,7 +3,7 @@ import { getMenu } from "../../services/apiRestaurant";
 import MenuItem from "./MenuItem";
 
 function Menu() {
-  // we do this way instead of directly doing this is that the loader only runs when this specific component is rendered (fetch on render approach)
+  // we do this way instead of directly doing this is that the loader only runs when this specific component is rendered (render as you fetch approach not fetch on render)
   const menu = useLoaderData();
 
   return (
