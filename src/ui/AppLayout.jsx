@@ -8,7 +8,7 @@ function AppLayout() {
   const isLoading = navigation.state === "loading";
 
   return (
-    <div className="grid h-dvh grid-rows-[auto_1fr_auto]">
+    <div className="grid h-dvh grid-rows-[auto_1fr_auto] bg-background">
       {isLoading && <Loader />}
 
       <Header />
@@ -18,6 +18,7 @@ function AppLayout() {
           <Outlet />
         </main>
       </div>
+
       <CartOverview />
     </div>
   );

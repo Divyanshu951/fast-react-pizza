@@ -6,7 +6,9 @@ function Username() {
   if (!username) return null;
 
   return (
-    <div className="hidden text-sm font-semibold md:block">{username}</div>
+    <div className="hidden rounded-full border border-border bg-surface px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent md:block">
+      {username}
+    </div>
   );
 }
 
