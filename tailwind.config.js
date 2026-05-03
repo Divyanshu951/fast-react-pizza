@@ -7,11 +7,19 @@ export default {
       fontFamily: {
         sans: ["Roboto Mono", "monospace"],
       },
-
+      colors: {
+        background: "var(--color-background)",
+        surface: "var(--color-surface)",
+        border: "var(--color-border)",
+        accent: "var(--color-accent)",
+        "accent-hover": "var(--color-accent-hover)",
+        danger: "var(--color-danger)",
+        foreground: "var(--color-foreground)",
+        muted: "var(--color-muted)",
+      },
       height: {
         dvh: "100dvh",
       },
-
       minHeight: {
         dvh: "100dvh",
       },
